@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'tweets/new'
+  get 'tweets/create'
+  get 'tweets/index'
+  get 'tweets/show'
+  get 'tweets/edit'
+  get 'tweets/update'
+  get 'tweets/destroy'
   get 'users/index'
   get 'users/show'
   get 'users/edit'
