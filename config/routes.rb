@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'homes/top'
   # get 'tweets/new'
   # get 'tweets/create'
   # get 'tweets/index'
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   # get 'users/edit'
   # get 'users/update'
   devise_for :users
+  root 'homes#top'
   resources :tweets
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
