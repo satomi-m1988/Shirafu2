@@ -1,8 +1,8 @@
 <table>
+	<% @users.each do |user| %>
 	<tr>
-		<% @users.each do |user| %>
-			<td><%= link_to user.name, user_path(user) %></td>
-			<td><%= link_to'SHOW', user_path(user) %></td>
-		<% end %>
+		<td><%= link_to user.name, user_path(user) %></td>
+		<td><%= link_to'SHOW', user_path(user) %></td>
 	</tr>
+	<% end %>
 </table>
