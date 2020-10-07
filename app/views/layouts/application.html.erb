@@ -12,7 +12,7 @@
   <body>
           <% if user_signed_in? %>
             <%= link_to"Shirafu", root_path %>
-              <%= link_to"Home", tweets_path %>
+              <%= link_to"Tweet", tweets_path %>
             <%#= link_to tweets_hashtag_path, method: :get do %>
             <%= link_to"New", new_tweet_path %>
             <%= link_to"User", users_path %>

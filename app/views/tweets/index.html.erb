@@ -1,2 +1,9 @@
-<h1>Tweets#index</h1>
-<p>Find me in app/views/tweets/index.html.erb</p>
+
+<table>
+	<tr>
+		<% @tweets.each do |tweet| %>
+			<td><%= link_to tweet.user.name, user_path(tweet.user) %></td>
+			<td><%= tweet.body %></td>
+		<% end %>
+	</tr>
+</table>
