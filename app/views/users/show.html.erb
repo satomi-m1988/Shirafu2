@@ -1,2 +1,15 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<table>
+	<tr>
+<td><u>名前</u></td>
+<td><%= @user.name %></td>
+<!-- <u>自己紹介</u> -->
+<%#= @user.introduction %>
+<!-- <u>禁酒歴</u> -->
+<%#= @user.history %>
+<!-- <u>好きなお酒</u> -->
+<%#= @user.favorite_alcohol %>
+<% if @user == current_user %>
+<td><%= link_to'Edit', edit_user_path(@user) %></td>
+<% end %>
+</tr>
+</table>
