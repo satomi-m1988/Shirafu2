@@ -1,6 +1,7 @@
 <table>
 	<% @tweets.each do |tweet| %>
 	<tr>
+		<td><%= attachment_image_tag tweet.user, :image, :fill, 80, 80, format: 'jpeg', fallback: "no_image.jpg", size:'80x80' %></td>
 		<td><%= link_to tweet.user.name, user_path(tweet.user) %></td>
 		<td><%= tweet.body %></td>
 	</tr>

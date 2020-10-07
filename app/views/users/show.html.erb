@@ -1,15 +1,17 @@
 <table>
 	<tr>
+<td><%= attachment_image_tag @user, :image, :fill, 200, 200, format: 'jpg', fallback: "no_image.jpg", size:'200x200'  %></td>
 <td><u>名前</u></td>
 <td><%= @user.name %></td>
-<!-- <u>自己紹介</u> -->
-<%#= @user.introduction %>
-<!-- <u>禁酒歴</u> -->
-<%#= @user.history %>
-<!-- <u>好きなお酒</u> -->
-<%#= @user.favorite_alcohol %>
+<td><u>自己紹介</u></td>
+<td><%= @user.introduction %></td>
+<td><u>禁酒歴</u></td>
+<td><%= @user.history %></td>
+<td><u>好きなお酒</u></td>
+<td><%= @user.favorite_alcohol %></td>
 <% if @user == current_user %>
 <td><%= link_to'Edit', edit_user_path(@user) %></td>
-<% end %>
 </tr>
+<% end %>
+
 </table>

@@ -1,5 +1,12 @@
 <%= form_for(@user) do |f| %>
+<%= f.attachment_field :image %><br>
 <%= f.label :名前　　　 %>
-<%= f.text_field :name %>
+<%= f.text_field :name %><br>
+<%= f.label :自己紹介　　　 %>
+<%= f.text_field :introduction %><br>
+<%= f.label :禁酒歴　　　 %>
+<%= f.text_field :history %><br>
+<%= f.label :好きなお酒　　　 %>
+<%= f.text_field :favorite_alcohol %><br>
 <%= f.submit 'Update' %>
 <% end %>
