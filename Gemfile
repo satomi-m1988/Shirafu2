@@ -52,6 +52,7 @@ group :development do
   gem 'rubocop-airbnb'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry-byebug'
 end
 
 group :test do
@@ -68,3 +69,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'jquery-rails'
