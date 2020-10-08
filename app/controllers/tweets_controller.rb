@@ -29,6 +29,7 @@ class TweetsController < ApplicationController
 		else
 			@tweets = Tweet.all
 		end
+		@tag_lists = Tag.all
 	end
 
 	# def show
