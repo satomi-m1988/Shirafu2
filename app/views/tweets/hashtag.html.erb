@@ -8,9 +8,13 @@
 	<div class="row">
 		<div class="col-xs-6">
 			<p style="color: blue">タグ一覧</p>
+			<table>
 			<% @tag_lists. shuffle. first(5). each do |tag| %>
-				<%= link_to tag.tag_name, tag_path(tag) %>
+				<tr>
+				<td><%= link_to tag.tag_name, tag_path(tag) %></td>
+				</tr>
 			<% end %><br>
+			</table>
 		</div>
 
 		<div class="col-xs-6">
