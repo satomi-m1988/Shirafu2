@@ -12,8 +12,8 @@
   <body>
           <% if user_signed_in? %>
             <%= link_to"Shirafu", root_path %>
-              <%= link_to"Tweet", tweets_path %>
-            <%#= link_to tweets_hashtag_path, method: :get do %>
+            <%= link_to"Tweet", tweets_path %>
+            <%= link_to"Search", tweets_hashtag_path %>
             <%= link_to"New", new_tweet_path %>
             <%= link_to"User", users_path %>
             <%= link_to"logout", destroy_user_session_path, method: :delete %>

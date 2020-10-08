@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'homes/top'
+  # get 'homes/top'
   # get 'tweets/new'
   # get 'tweets/create'
   # get 'tweets/index'
@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   # get 'users/update'
   devise_for :users
   root 'homes#top'
+  get 'tweets/hashtag' => 'tweets#hashtag'
   resources :tweets
   resources :users
+  resources :tags, only: [:show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

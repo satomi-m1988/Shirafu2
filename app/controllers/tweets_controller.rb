@@ -22,15 +22,15 @@ class TweetsController < ApplicationController
 		@tweets = Tweet.all
 	end
 
-	# def hashtag
-	# 	@tag = Tag.find_by(tag_name: params[:tag_name])
-	# 	if  @tag.present?
-	# 		@tweets = @tag.tweets.page(params[:page]).per(6).order(created_at: :desc)
-	# 	else
-	# 		@tweets = Tweet.all.page(params[:page]).per(6).order(created_at: :desc)
-	# 	end
-	# 	@tag_lists = Tag.all
-	# end
+	def hashtag
+		@tag = Tag.find_by(tag_name: params[:tag_name])
+		if  @tag.present?
+			@tweets = @tag.tweets
+		else
+			@tweets = Tweet.all
+		end
+		@tag_lists = Tag.all
+	end
 
 	# def show
 	# 	@tweet = Tweet.find(params[:id])
