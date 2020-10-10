@@ -13,4 +13,30 @@ RSpec.describe Tweet, type: :model do
 			expect(@tweet).to be_valid
 		end
 	end
+
+	context "ツイートbodyがある時投稿できる" do
+		before do
+			user = User.create(name: "いいい", email: "b@b", password: "bbbb1111")
+			@tweet = Tweet.new
+			@tweet.body = "hogehoge"
+			@tweet.user_id = user.id
+			@tweet.save
+		end
+		it "ツイートbodyに内容があるので保存（投稿）される" do
+			expect(@tweet).to be_valid
+		end
+
+	end
+
+	context "ツイートbody空欄だとエラーになる" do
+		before do
+			user = User.create(name: "いいい", email: "b@b", password: "bbbb1111")
+			@tweet = Tweet.new
+		end
+		it "ツイートbody空欄だとエラーになる" do
+			@tweet.body = nil
+			@tweet.valid?
+			expect(@tweet.errors[:body]).to include("error")
+		end
+	end
 end
