@@ -36,7 +36,7 @@ RSpec.describe Tweet, type: :model do
 		it "ツイートbody空欄だとエラーになる" do
 			@tweet.body = nil
 			@tweet.valid?
-			expect(@tweet.errors[:body]).to include("error")
+			expect(@tweet.errors[:body]).to include("can't be blank")
 		end
 	end
 end

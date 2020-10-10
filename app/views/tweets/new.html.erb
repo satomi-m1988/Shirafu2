@@ -1,4 +1,10 @@
 <%= form_for(@tweet) do |f| %>
 	<%= f.text_area :body %>
 	<%= f.submit 'Shirafuru' %>
+		<% if @tweet.errors.any? %>
+			<!-- tweet body validation有りの為　空欄→エラー -->
+			<% @tweet.errors.full_messages.each do |message| %>
+			<%= message %>
+			<% end %>
+		<% end %>
 <% end %>
